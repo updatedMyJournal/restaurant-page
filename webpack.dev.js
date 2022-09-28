@@ -7,5 +7,6 @@ export default merge(common, {
   devServer: {
     open: true,
     port: 8000,
+    watchFiles: ('./src/index.html'),
   },
 });

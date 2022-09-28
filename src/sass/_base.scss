@@ -1,12 +1,76 @@
+:root {
+  --gap-size: 50px;
+  --doc-bg-color: 245, 255, 250;
+
+  --int: 1.3;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--int));
+  --scale2: calc(var(--scale1) * var(--int));
+  --scale3: calc(var(--scale2) * var(--int));
+  --scale4: calc(var(--scale3) * var(--int));
+}
+
 html {
   box-sizing: border-box;
-  height: 100%;
+  font-size: 100%;
+
+  background-color: rgb(var(--doc-bg-color));
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
-body {
-  min-height: 100%;
+#content {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  min-width: 300px;
+  max-width: 1366px;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+  text-shadow: 3px 2px 1px black;
+  letter-spacing: 2px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-size);
+
+  padding: 0 10px;
+  color: rgb(var(--doc-bg-color));
+
+  h1 {
+    font-size: var(--scale3);
+  }
+
+  h2 {
+    font-size: var(--scale2);
+  }
+}
+
+main {
+  p {
+    font-size: var(--scale1);
+    line-height: 1.4rem;
+  }
+}
+
+@media (min-width: 768px), (min-height: 700px) {
+  header {
+    h1 {
+      font-size: var(--scale4);
+    }
+  }
 }

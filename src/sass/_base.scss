@@ -50,14 +50,6 @@ header {
 
   padding: 0 10px;
   color: rgb(var(--doc-bg-color));
-
-  h1 {
-    font-size: var(--scale3);
-  }
-
-  h2 {
-    font-size: var(--scale2);
-  }
 }
 
 main {
@@ -67,10 +59,16 @@ main {
   }
 }
 
+h1 {
+  font-size: var(--scale3);
+}
+
+h2 {
+  font-size: var(--scale2);
+}
+
 @media (min-width: 768px), (min-height: 700px) {
-  header {
-    h1 {
-      font-size: var(--scale4);
-    }
+  h1 {
+    font-size: var(--scale4);
   }
 }

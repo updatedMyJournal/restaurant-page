@@ -21,6 +21,12 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  transition: margin, margin-left, margin-right, font-size, padding;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
 body {
   font-size: var(--scale1);
 }

@@ -12,6 +12,17 @@ nav {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .selected {
+    color: rgb(220, 15, 0);
+    text-decoration: underline;
+  }
+
+  button:hover,
+  .bonus:hover {
+    color: rgba(220, 15, 0, 0.8);
   }
 
   .bonus {

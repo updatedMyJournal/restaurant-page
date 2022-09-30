@@ -72,6 +72,16 @@ h2 {
   font-size: var(--scale2);
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 30vh;
+  background-color: black;
+  color: white
+}
+
 @media (min-width: 768px), (min-height: 700px) {
   h1 {
     font-size: var(--scale4);

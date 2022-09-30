@@ -10,6 +10,9 @@ function appendInitialDOMElements() {
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="bonus" target="_blank">Bonus</a>
     </nav>
     <div class="container"></div>
+    <footer>
+      <p>Typical footer</p>
+    </footer>
     `
   );
 }

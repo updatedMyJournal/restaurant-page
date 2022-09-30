@@ -30,6 +30,7 @@ html {
   max-width: 1366px;
   min-height: 100vh;
   margin: auto;
+  font-family: 'MavenPro', sans-serif;
 }
 
 .bg-image {
@@ -59,6 +60,10 @@ main {
   }
 }
 
+h1, h2, h3 {
+  font-family: 'MavenProBold', sans-serif;
+}
+
 h1 {
   font-size: var(--scale3);
 }
@@ -71,4 +76,15 @@ h2 {
   h1 {
     font-size: var(--scale4);
   }
+}
+
+@font-face {
+  font-family: 'MavenPro';
+  src: url('../fonts/MavenPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MavenProBold';
+  src: url('../fonts/MavenPro-Bold.ttf') format('truetype');
+  font-weight: bold;
 }

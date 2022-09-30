@@ -17,7 +17,7 @@ function insertHomeContent() {
           associates.
         </p>
         <p>
-          See the menu <a href="">here</a>.
+          See the menu <a href="" onclick="event.preventDefault();document.querySelector('nav .menu').click()">here</a>.
         </p>
       </main>
     </div>

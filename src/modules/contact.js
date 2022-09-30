@@ -7,9 +7,9 @@ function insertContactContent() {
         <h1>Contact us</h1>
       </header>
       <section>
-        <div class="information-container">
+        <div>
           <h2>Contact info</h2>
-          <div class="item">
+          <div>
             <h3>Location</h3>
             <div>
               <div>Willis Ave,</div>  
@@ -17,14 +17,14 @@ function insertContactContent() {
               <div>10454</div>
             </div>
           </div>
-          <div class="item">
+          <div>
             <h3>Hours</h3>
             <div>
               <div>Monday–Sunday</div>
               <div>9am–1am</div>
             </div>
           </div>
-          <div class="item">
+          <div>
             <h3>Phone</h3>
             <div>(777) 777-7777</div>
           </div>

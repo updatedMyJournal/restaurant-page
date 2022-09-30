@@ -11,7 +11,12 @@ function appendInitialDOMElements() {
     </nav>
     <div class="container"></div>
     <footer>
-      <p>Typical footer</p>
+      <div>
+        <div>Willis Ave | The Bronx, NY | 10454</div>  
+        <div>Monday–Sunday | 9am–1am</div>
+        <div>(777) 777-7777</div>
+      </div>
+      <div>©Foody</div>
     </footer>
     `
   );

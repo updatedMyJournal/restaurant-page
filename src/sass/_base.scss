@@ -8,12 +8,12 @@
   --scale2: calc(var(--scale1) * var(--int));
   --scale3: calc(var(--scale2) * var(--int));
   --scale4: calc(var(--scale3) * var(--int));
+  --scale5: calc(var(--scale4) * var(--int));
 }
 
 html {
   box-sizing: border-box;
   font-size: 100%;
-
   background-color: rgb(var(--doc-bg-color));
 }
 
@@ -21,11 +21,11 @@ html {
   box-sizing: inherit;
 }
 
-#content {
-  display: flex;
-  flex-direction: column;
+body {
+  font-size: var(--scale1);
+}
 
-  position: relative;
+#content {
   min-width: 300px;
   max-width: 1366px;
   min-height: 100vh;
@@ -34,30 +34,24 @@ html {
 }
 
 .bg-image {
-  background-size: cover;
-  background-position: center;
-
-  text-align: center;
-  text-shadow: 3px 2px 1px black;
-  letter-spacing: 2px;
-}
-
-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: var(--gap-size);
 
-  padding: 0 10px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  text-shadow: 3px 2px 1px black;
   color: rgb(var(--doc-bg-color));
+  letter-spacing: 2px;
 }
 
-main {
-  p {
-    font-size: var(--scale1);
-    line-height: 1.4rem;
-  }
+header {
+  padding: 0 10px;
+  color: rgb(var(--doc-bg-color));
 }
 
 h1, h2, h3 {
@@ -72,19 +66,49 @@ h2 {
   font-size: var(--scale2);
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-height: 30vh;
-  background-color: black;
-  color: white
+h3 {
+  font-size: var(--scale1);
+  margin-bottom: 6px;
 }
 
-@media (min-width: 768px), (min-height: 700px) {
+footer {
+  display: flex;
+  flex-direction: column;
+  
+  min-height: 25vh;
+  background-color: black;
+  color: white;
+
+  & > * {
+    margin: calc(var(--gap-size) / 2) 15px;
+  }
+
+  :last-child {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
   h1 {
-    font-size: var(--scale4);
+    font-size: var(--scale5);
+  }
+
+  h2 {
+    font-size: var(--scale3);
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    & > * {
+      margin: 0;
+    }
+
+    :last-child {
+      margin-left: 0;
+    }
   }
 }
 

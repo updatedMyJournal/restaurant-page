@@ -1,16 +1,12 @@
 .home-content {
-  display: flex;
-  flex-direction: column;
-  flex: auto;
-
-  header {
-    flex-basis: 100vh;
+  .bg-image {
+    height: 100vh;
     background-image: url('../assets/home-header-bg.jpg');
   }
 
   main {
-    margin: 20px;
-    flex: auto;
+    min-height: 40vh;
+    margin: 15px;
   }
 
   a {
@@ -22,10 +18,10 @@
   }
 }
 
-@media (min-width: 768px), (min-height: 700px) {
+@media screen and (min-width: 768px) {
   .home-content {
     main {
-      margin: 30px 50px;
+      margin: var(--gap-size) calc(var(--gap-size) * 2);
     }
   }
 }

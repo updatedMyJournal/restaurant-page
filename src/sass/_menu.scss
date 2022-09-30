@@ -1,20 +1,4 @@
-$big-gap: var(--gap-size);
-$small-gap: calc(var(--gap-size) / 2);
-
 .menu-content {
-  display: flex;
-  flex-direction: column;
-  flex: auto;
-
-  .bg-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 50vh;
-    color: rgb(var(--doc-bg-color)); 
-  }
-
   .bg-image.breakfast {
     background-image: url('../assets/breakfast.jpg');
   }
@@ -28,20 +12,20 @@ $small-gap: calc(var(--gap-size) / 2);
   }
 
   h3 {
-    font-size: var(--scale1);
     margin-top: 0;
-    margin-bottom: 10px;
   }
 }
 
 .food-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: $small-gap $big-gap;
+  grid-gap: calc(var(--gap-size) / 2) var(--gap-size);
 
-  margin: $small-gap $big-gap;
+  margin: calc(var(--gap-size) / 2) 15px;
 }
 
-.food-item div {
-  font-size: var(--scale1);
+@media screen and (min-width: 768px) {
+  .food-container {
+    margin: var(--gap-size);
+  }
 }
